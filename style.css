@@ -1,0 +1,306 @@
+/*
+ Theme Name:   Enfold Child Theme
+ Theme URI:    https://www.neckarmedia.com
+ Description:  WordPress Child Theme
+ Author:       Neckarmedia
+ Author URI:   https://www.neckarmedia.com
+ Template:     enfold
+ Version:      1.0
+*/
+
+/* @link https://utopia.fyi/type/calculator?c=375,16,1.2,1240,18,1.25,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.69rem, calc(0.68rem + 0.05vw), 0.72rem);
+  --step--1: clamp(0.83rem, calc(0.80rem + 0.12vw), 0.90rem);
+  --step-0: clamp(1.00rem, calc(0.95rem + 0.23vw), 1.13rem);
+  --step-1: clamp(1.20rem, calc(1.11rem + 0.38vw), 1.41rem);
+  --step-2: clamp(1.44rem, calc(1.30rem + 0.59vw), 1.76rem);
+  --step-3: clamp(1.73rem, calc(1.52rem + 0.87vw), 2.20rem);
+  --step-4: clamp(2.07rem, calc(1.78rem + 1.25vw), 2.75rem);
+  --step-5: clamp(2.49rem, calc(2.08rem + 1.75vw), 3.43rem);
+  --step-6: clamp(2.99rem, calc(2.42rem + 2.41vw), 4.29rem);
+  --step-7: clamp(3.58rem, calc(2.81rem + 3.29vw), 5.36rem);
+  --step-8: clamp(4.30rem, calc(3.26rem + 4.45vw), 6.71rem);
+}
+
+:root {
+    --primary-font: 'Arial', sans-serif;
+    --heading-font: 'Arial', sans-serif;
+}
+
+
+/* =======================================================================================================================================
+Typo
+======================================================================================================================================= */
+html{-webkit-tap-highlight-color: transparent;}
+body{-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;}
+body,p{font-family: var(--primary-font); font-size: var(--step-0); font-weight: 400; line-height: 1.6}
+p{margin: 0 0 1em;}
+h1,h2,h3,h4,h5,h6{font-family: var(--heading-font); font-weight: 700 !important; line-height: 1.2; letter-spacing: 0 !important; text-transform: inherit !important; margin: 0 0 .4em 0 !important}
+
+#top h1{font-size: var(--step-4);}
+#top h2{font-size: var(--step-3);}
+#top h3{font-size: var(--step-2);}
+#top h4{font-size: var(--step-1);}
+
+#top .special_amp{color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;}
+#top .av-special-heading{padding: 0 !important}
+#top .av-special-heading .special-heading-border{display: none;}
+#top .av-special-heading.avia-builder-el-no-sibling .av-special-heading-tag{margin: 0 !important}
+
+#top .avia-section b,
+#top .avia-section strong,
+#top .footer_color b,
+#top .footer_color strong,
+#top .socket_color b,
+#top .socket_color strong{color: inherit}
+
+/* Button */
+#top div .avia-button{
+    font-size: var(--step--1);
+    font-weight: 700;
+    padding: 1em 2em;
+    border-radius: .5em;
+    background: #000;
+    border: 1px solid #000 !important;
+    color: #fff;
+    text-decoration: none !important;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+}
+#top div .avia-button.avia-color-dark{color: #000;}
+#top div .avia-button.avia-color-light{border: 1px solid #fff !important;}
+#top div .avia-button:hover{opacity: 1}
+html.no-touch-device #top div .avia-button:hover{translate: 0 -2px}
+
+/* Blockquote */
+#top blockquote{border: 0; font-size: var(--step-1); margin: 2em 0 2em; padding: 0 0 0 2em; position: relative; max-width: 420px; font-style: italic; line-height: 1.6}
+#top blockquote:before{content: '\e833'; font-family: 'entypo-fontello'; position: absolute; top: -.3em; left: 0; opacity: .1; font-size: 4em; font-style: normal; line-height: 1}
+#top blockquote p{font-size: 1em; margin: 0}
+
+/* List */
+#top .avia_textblock ul{
+    list-style: none;
+    margin: 0 0 1em 0;
+}
+#top .avia_textblock ul > li{
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0 1em;
+    position: relative;
+}
+#top .avia_textblock ul > li:before{
+    content: '\e875';
+    font-family: 'entypo-fontello';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+}
+
+
+/* =======================================================================================================================================
+Header
+======================================================================================================================================= */
+#header:not(.av_header_transparency){
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.02), 0 2px 2px rgba(0,0,0,0.02), 0 4px 4px rgba(0,0,0,0.02), 0 6px 8px rgba(0,0,0,0.02), 0 8px 16px rgba(0,0,0,0.02);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.02), 0 2px 2px rgba(0,0,0,0.02), 0 4px 4px rgba(0,0,0,0.02), 0 6px 8px rgba(0,0,0,0.02), 0 8px 16px rgba(0,0,0,0.02);
+}
+
+@media only screen and (max-width: 989px){ 
+    .responsive #top #header{position: fixed !important; top: 0; left: 0; right: 0; width: 100%}
+    .responsive #top #main,
+    .responsive.html_mobile_menu_tablet.html_header_top #top #main{padding-top: 80px !important}
+    .responsive #top #wrap_all .av-logo-container,
+    .responsive #top #header_main > .container .main_menu .av-main-nav > li > a,
+    .responsive.html_mobile_menu_tablet #top #wrap_all .av-logo-container,
+    .responsive.html_mobile_menu_tablet #top #header_main > .container .main_menu .av-main-nav > li > a{
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+@media only screen and (min-width: 990px){
+    #header .inner-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+    #header .inner-container > .logo{order: 1; margin-right: auto; position: relative;}
+    #header .inner-container > nav{order: 3; position: relative;}
+}
+
+/* Logo */
+#header_main .inner-container > .logo,
+#header_main .inner-container > .logo a{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; overflow: visible}
+#header_main .inner-container > .logo a{height: auto}
+#header_main .inner-container > .logo a svg,
+#header_main .inner-container > .logo a img{width: 160px}
+
+@media only screen and (min-width: 990px){
+    #header_main .inner-container > .logo a svg,
+    #header_main .inner-container > .logo a img{width: 240px}
+}
+
+/* Navigation */
+@media only screen and (min-width: 990px){
+	#header_main .inner-container > nav{display: flex; align-items: center;}
+	#header_main .inner-container > nav > div,
+	#header_main .inner-container > nav > div > ul,
+	#header_main .inner-container > nav > div > ul > li{height: 100%}
+	#header_main .inner-container > nav > div > ul > li.menu-item{display: flex; align-items: center}
+	#header_main .inner-container > nav ul#avia-menu > li > a{line-height: 1.6 !important; height: auto !important; font-size: var(--step--1); font-weight: 400}
+    #header_main .inner-container > nav ul#avia-menu > li li > a{font-size: var(--step--1); font-weight: 400}
+    #header_main .inner-container > nav ul#avia-menu li:hover > a > .avia-menu-text,
+    #header_main .inner-container > nav ul#avia-menu li.current-menu-item > a > .avia-menu-text{opacity: .3}
+}
+
+@media only screen and (min-width: 1440px){
+    #header_main .inner-container > nav ul#avia-menu > li > a{font-size: var(--step-0);}
+}
+
+/* Hamburger Menu */
+.av-hamburger-box{width: 32px}
+.av-hamburger-inner, 
+.av-hamburger-inner::before, 
+.av-hamburger-inner::after{border-radius: 0}
+#top ul#av-burger-menu-ul{vertical-align: top}
+#top ul#av-burger-menu-ul li a:hover{background: inherit !important;}
+#top ul#av-burger-menu-ul > li > a{font-size: var(--step-0);}
+#top ul#av-burger-menu-ul > li li > a{font-size: var(--step--1);}
+
+
+/* =======================================================================================================================================
+Accessibility
+======================================================================================================================================= */
+#top :focus-visible{
+    overflow: visible; 
+    outline: -webkit-focus-ring-color auto 1px; 
+    opacity: 1 !important;
+	box-shadow: inset 0 0 0 2px #fff;
+}
+
+
+/* =======================================================================================================================================
+Misc
+======================================================================================================================================= */
+/* Layout */
+.widgettitle{font-weight: inherit; text-transform: inherit; letter-spacing: inherit; font-size: inherit;}
+
+@media only screen and (max-width: 767px){
+    .responsive #top #wrap_all .container{width: 90%; max-width: 90%;}
+}
+
+/* Images */
+#top .image-overlay{display: none !important;}
+#top .avia_image,
+#top .av-image-caption-overlay,
+#top .avia-image-container-inner{border-radius: 0}
+
+/* Toggle */
+#top section.av_toggle_section .toggler{padding: 1em 3em 1em 1rem; margin: 0 0 .8em; font-size: var(--step-0); background: transparent; border: 1px solid; border-radius: .5em}
+#top section.av_toggle_section .toggler:hover{background: transparent;}
+#top section.av_toggle_section .toggler .toggle_icon{display: none;}
+#top section.av_toggle_section .toggler:after{
+	content: '\e87d';
+    font-family: 'entypo-fontello';
+    position: absolute;
+    right: 1em;
+    transition: .2s ease;
+}
+#top section.av_toggle_section .toggler.activeTitle:after{rotate: 90deg}
+#top section.av_toggle_section .toggle_content{border: 0; background: transparent; padding: .5em 1rem 1.5em;}
+#top section.av_toggle_section .toggle_content *{font-size: var(--step--1);}
+
+/* Social Icons */
+#top ul.__social--media--icons{
+    display: flex;
+    gap: 0;
+    font-size: var(--step-2);
+    margin: 0 0 1em 0;
+    line-height: 1;
+}
+#top ul.__social--media--icons > li > a{padding: .2em .4em;}
+
+
+/* =======================================================================================================================================
+Blog: Single Post
+======================================================================================================================================= */
+#top .template-single-blog article.post-entry .big-preview{max-width: 720px; margin: auto;}
+#top .fullsize .template-blog .post .entry-content-wrapper{max-width: 720px; text-align: left; line-height: 1.6; font-size: var(--step-0);}
+#top .template-single-blog article.post-entry .entry-content-wrapper header h1{text-align: left; font-size: var(--step-3); padding: 1rem 0}
+#top .template-single-blog article.post-entry .entry-content-wrapper header .post-meta-infos{text-align: left; font-size: var(--step--1);}
+
+
+/* =======================================================================================================================================
+Formular
+======================================================================================================================================= */
+#top .input-text, 
+#top input[type=email], 
+#top input[type=input], 
+#top input[type=number], 
+#top input[type=password], 
+#top input[type=search], 
+#top input[type=tel], 
+#top input[type=text], 
+#top input[type=url], 
+#top select, 
+#top textarea{
+    font-family: var(--primary-font);
+    padding: 1em;
+    border-radius: .5em;
+    border: 1px solid;
+    margin: 0;
+    font-size: var(--step--1);
+}
+
+#top form label{font-size: var(--step--1)}
+#top form button{
+	font-size: var(--step--1);
+    font-weight: 700;
+    padding: 1em 2em;
+    border-radius: .5em;
+    background: var(--enfold-main-color-color);
+    color: var(--enfold-main-color-bg);
+	border: 1px solid var(--enfold-main-color-color);
+    box-shadow: none;
+}
+#top .alternate_color form button{
+	background: var(--enfold-alternate-color-color);
+    color: var(--enfold-alternate-color-bg);
+}
+
+/* Formidable Forms */
+#top .frm_forms > form .frm_primary_label{
+	color: inherit;
+	font-weight: 700;
+}
+#top .frm_forms > form .frm_required{
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+#top .frm_forms > form p.description, 
+#top .frm_forms > form div.description, 
+#top .frm_forms > form div.frm_description, 
+#top .frm_forms > form .frm-show-form > div.frm_description, 
+#top .frm_forms > form .frm_error, 
+#top .frm_forms > form .frm_pro_max_limit_desc{
+	color: inherit;
+	font-size: var(--step--1);
+}
+
+
+/* =======================================================================================================================================
+Footer
+======================================================================================================================================= */
+#footer{padding: 2rem 0}
+
+#socket{font-size: var(--step--1);}
+#socket .container{padding-top: 1rem; padding-bottom: 4rem;}
+
+#scroll-top-link{height: 56px; width: 48px; line-height: 56px; border-radius: 0; border: 0 !important; background: #f2f2f2}
+#scroll-top-link.avia_pop_class{opacity: 1}
+#scroll-top-link:hover{background: #f2f2f2}
+#scroll-top-link:before{content: '\e87e'}
